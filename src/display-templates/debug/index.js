@@ -1,14 +1,9 @@
+import Debug from './debug-list';
 import React from 'react';
-import {render} from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
 
-class App extends React.Component {
-  render () {
-    return (
-        <div className="app-main">
-            Hello World!
-        </div>
-    );
-  }
+window.NamespacedDebugTemplateRenderer = function (value) {
+  debugger;
+  const htmlAsString = ReactDOMServer.renderToString(<Debug value={value} />);
+  return htmlAsString;
 }
-
-window.Debug = <App />;
