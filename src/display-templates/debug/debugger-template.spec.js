@@ -8,7 +8,11 @@ describe('Debugger Display Template', function () {
   const props = {
     items: [
       {
-        Title: 'Test1'
+        String: 'Test1',
+        Object: {Something: 'AAA'},
+        Number: 1,
+        Float: -10.00
+
       }, {
         Title: 'Test2'
       }
@@ -33,6 +37,6 @@ describe('Debugger Display Template', function () {
   it('changes color on hover', function () {
     expect(DebuggerComponent.find('div.debugger-template-item')).to.have.css('color', 'rgb(0, 0, 0)');
     DebuggerComponent.find('div.debugger-template-item').simulate('mouseEnter', null);
-    expect(DebuggerComponent.find('div.debugger-template-item')).to.have.css('color', 'rgb(0, 0, 255)');
+    expect(DebuggerComponent.find('div.debugger-template-item')).to.have.css('color', 'rgb(136, 34, 0)');
   });
 });
