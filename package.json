@@ -48,6 +48,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
     "mocha": "^3.0.2",
+    "npm-run-all": "^3.0.0",
     "react-addons-test-utils": "^15.3.0",
     "webpack": "^1.13.1",
     "webpack-livereload-plugin": "^0.8.1"

@@ -1,15 +1,23 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TestUtils from 'react-addons-test-utils';
 import chaiJQuery from 'chai-jquery';
 import jQuery from 'jquery';
 
 chaiJQuery(chai, chai.util, jQuery);
 
-const renderComponent = function renderComponent (ComponentToString,
+const renderComponent = function renderComponent (Component,
   props = {}) {
-    const componentHTML = ComponentToString(props);
-    const componentJQueryHtml = jQuery(jQuery.parseHTML(componentHTML));
-    jQuery(document).find('body').append(componentJQueryHtml);
+    const componentInstance = TestUtils.renderIntoDocument(
+        <Component {...props} />
+    );
 
-    return componentJQueryHtml;
+    return jQuery(ReactDOM.findDOMNode(componentInstance));
+};
+
+jQuery.fn.simulate = function simulate (eventName, eventData) {
+    const firstElementIndex = 0;
+    TestUtils.Simulate[eventName](this[firstElementIndex], eventData);
 };
 
 export {renderComponent};
