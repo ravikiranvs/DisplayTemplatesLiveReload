@@ -1,0 +1,9 @@
+<div class='debugger-template'>
+  {{#each items}}
+  <div class='debugger-template-item' style='border: solid 1px; color: #222222; padding: 3px; margin 3px; line-height: 200%' onmouseover='DebuggerFunctions.onHover(this)' onmouseout='DebuggerFunctions.onHoverExit(this)'>
+    {{#each properties}}
+    <div style='display: inline; margin: 2px 2px 2px 2px; padding: 2px 2px 2px 2px; background-color: #AACCFF'>{{key}}: {{value}}</div>
+    {{/each}}
+  </div>
+  {{/each}}
+</div>

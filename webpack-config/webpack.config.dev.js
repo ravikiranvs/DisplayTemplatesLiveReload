@@ -10,14 +10,15 @@ var baseConfig = {
   module: {
     loaders: [
       { test: /\.js?$/, include: APP_DIR, loader: 'babel' },
-      { test: /\.css$/, loader: "style-loader!css-loader" }
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.html$/, loader: 'handlebars-loader' }
     ]
   }
 };
 
 var cdnFiles = Object.assign({}, baseConfig, {
   entry: {
-    'debugging-display-template': APP_DIR + '/display-templates/debug/index.js'
+    'debugging-display-template': APP_DIR + '/display-templates/debugger/index.js'
   },
   output: {
     publicPath: '/',

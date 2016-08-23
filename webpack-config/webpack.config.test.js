@@ -7,7 +7,8 @@ module.exports = {
   noInfo: true,
   module: {
     loaders: [
-      { test: /\.js?$/, include: APP_DIR, loader: 'babel' }
+      { test: /\.js?$/, include: APP_DIR, loader: 'babel' },
+      { test: /\.html$/, loader: 'handlebars-loader' }
     ]
   }
 };

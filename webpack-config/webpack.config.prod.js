@@ -12,7 +12,8 @@ var baseConfig = {
   module: {
     loaders: [
       { test: /\.js?$/, include: APP_DIR, loader: 'babel' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") }
+      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+      { test: /\.html$/, loader: 'handlebars-loader' }
     ]
   },
   plugins: [
@@ -39,7 +40,7 @@ var baseConfig = {
 
 var cdnFiles = Object.assign({}, baseConfig, {
   entry: {
-    'debugging-display-template': APP_DIR + '/display-templates/debug/index.js'
+    'debugging-display-template': APP_DIR + '/display-templates/debugger/index.js'
   },
   output: {
     publicPath: '/',
