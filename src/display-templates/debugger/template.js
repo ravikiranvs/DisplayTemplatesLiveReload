@@ -26,7 +26,7 @@ class DebuggerTemplate extends TemplateBuilder {
   getNamespacedTemplateEvents() {
     const DebuggerFunctions = {
       onHover: (target) => {
-        target.style.color = '#0022FF';
+        target.style.color = '#882200';
       },
       onHoverExit: (target) => {
         target.style.color = '#222222';
