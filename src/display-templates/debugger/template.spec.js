@@ -2,7 +2,7 @@
 import DebuggerTemplate from './template.js';
 import renderTemplate from '../template-test-helper';
 
-describe('PersentCol', function () {
+describe('DebuggerTemplate', function () {
   let DebuggerHtml;
   const data = {
     items: [
