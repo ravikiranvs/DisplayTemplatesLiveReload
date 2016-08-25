@@ -10,12 +10,14 @@ module.exports = {
     embedSource: true,
     noAutoWrap: true,
     babel: {
-      presets: ['es2015', 'react']
+      presets: ['es2015']
     }
   },
   module: {
     loaders: [
-      { test: /\.js?$/, include: APP_DIR, loader: 'babel' }
+      { test: /\.js?$/, include: APP_DIR, loader: 'babel' },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.html$/, loader: 'handlebars-loader' }
     ],
     preLoaders: [
       {

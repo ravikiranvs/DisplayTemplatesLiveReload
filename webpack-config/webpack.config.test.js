@@ -8,6 +8,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js?$/, include: APP_DIR, loader: 'babel' },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.html$/, loader: 'handlebars-loader' }
     ]
   }

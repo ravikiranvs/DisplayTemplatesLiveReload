@@ -4,7 +4,6 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CompressionPlugin = require('compression-webpack-plugin');
 
 var APP_DIR = path.resolve(__dirname, '../src');
-var BUILD_DIR = path.resolve(__dirname, '../dest/scripts');
 var CDN_DIR = path.resolve(__dirname, '../CDN/scripts');
 
 var baseConfig = {
@@ -12,7 +11,7 @@ var baseConfig = {
   module: {
     loaders: [
       { test: /\.js?$/, include: APP_DIR, loader: 'babel' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
       { test: /\.html$/, loader: 'handlebars-loader' }
     ]
   },
