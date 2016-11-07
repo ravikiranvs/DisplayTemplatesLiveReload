@@ -1,4 +1,4 @@
-# SharePoint Display Templates with react.js and LiveReload [![Build Status](https://travis-ci.org/KiranSrikanta/DisplayTemplatesLiveReload.svg?branch=master)](https://travis-ci.org/KiranSrikanta/DisplayTemplatesLiveReload)
+# SharePoint Display Templates with react.js and LiveReload [![Build Status](https://travis-ci.org/ravikiranvs/DisplayTemplatesLiveReload.svg?branch=master)](https://travis-ci.org/ravikiranvs/DisplayTemplatesLiveReload)
 
 Sample code for creating Display Template with Handlebars and LiveReload.
 
